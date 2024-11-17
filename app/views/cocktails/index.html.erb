@@ -1,4 +1,13 @@
+<%= render "/pages/navbar" %>
 <div class="container">
+  <div class="d-flex justify-content-between">
+    <div>
+      <h1>Cocktail Madness</h1>
+    </div>
+    <div class="btn btn-custom">
+      🍸 Add Cocktail 🍸
+    </div>
+  </div>
   <h1><% @cocktails.each do|cocktail| %>
       <ul>
         <li><%= cocktail.name %></li>
