@@ -1,7 +1,5 @@
 class Cocktail < ApplicationRecord
-
-  def index
-    @cocktails = Cocktail.all
-  end
-  
+  validates :name, presence: true
+  validates :name, uniqueness: true
+  has_many :ingredients, through: :doses
 end
